@@ -38,12 +38,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Title "External DS18B20 temperature sensor"
+Date "2017-02-23"
+Rev "1.0"
+Comp "Solderpad Hardware License version 0.51"
+Comment1 "Contact: alanslists@gmail.com"
+Comment2 "Author: Alan Lord"
 Comment3 ""
 Comment4 ""
 $EndDescr

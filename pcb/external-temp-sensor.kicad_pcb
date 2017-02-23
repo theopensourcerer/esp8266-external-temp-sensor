@@ -3,7 +3,7 @@
   (general
     (links 32)
     (no_connects 0)
-    (area 145.212999 80.696999 174.827001 118.947001)
+    (area 145.212999 73.828999 186.690001 123.444001)
     (thickness 1.6)
     (drawings 6)
     (tracks 58)
@@ -13,6 +13,15 @@
   )
 
   (page A4)
+  (title_block
+    (title "External DS18B20 temperature sensor")
+    (date 2017-02-23)
+    (rev 1.0)
+    (company "Solderpad Hardware License version 0.51")
+    (comment 1 "Contact: alanslists@gmail.com")
+    (comment 2 "Author: Alan Lord")
+  )
+
   (layers
     (0 F.Cu signal hide)
     (31 B.Cu signal)
