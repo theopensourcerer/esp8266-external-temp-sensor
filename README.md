@@ -4,6 +4,6 @@ This is simple board which will connect to one of those DS18B20 temperature sens
 
 This board will ultimately live in a box outside my polytunnel with a 12V car battery, charged using solar power. One of the new features of this particular design, for me at least, is using a Switching regulator rather than a nomral LDO Linear regulator. I read that trying to drop from 12v to 3.3v is not effecient at all and can generate a lot of heat using a Linear design.
 
-The board's software (not yet written) will take a measurememt, send it over MQTT and go back to sleep. I wanted this so I could compare the temperature between inside my polytunnel (see https://github.com/theopensourcerer/esp8266_envmonitor) and the normal outdoor temperature.
+The board's software (under active testing & development) will take a measurememt, send it over MQTT and go back to sleep. I wanted this so I could compare the temperature between inside my polytunnel (see https://github.com/theopensourcerer/esp8266_envmonitor) and the normal outdoor temperature.
 
 As with the Environment Monitor Project I plan to publish the code and a 3D case for this design. Watch this space!
