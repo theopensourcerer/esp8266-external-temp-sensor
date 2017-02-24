@@ -38,7 +38,7 @@ This header must be included in any derived code or copies of the code.
 // Change these to suit your own application and network.
 const char* WIFI_SSID = "";
 const char* WIFI_PASSWORD = "";
-const char* MQTT_SERVER = "";
+const char* MQTT_SERVER = "192.168.1.2";
 
 // Topics (Environment and VCC)
 const char* ENV_TOPIC = "EXT/Env";

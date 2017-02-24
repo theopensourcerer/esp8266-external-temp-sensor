@@ -71,7 +71,6 @@ OneWire oneWire(ONE_WIRE_BUS);
 // Pass our oneWire reference to Dallas Temperature.
 DallasTemperature DS18B20(&oneWire);
 char temperatureCString[6];
-char temperatureFString[6];
 
 long lastMsg = 0;
 char msg[50];
@@ -182,6 +181,14 @@ void readDS() {
     if (DEBUG_PRINT) {
       Serial.print("Temp: ");
       Serial.print(temp);
+    }
+    if((millis() - startMills) > 10000) {
+      if (DEBUG_PRINT) {
+        Serial.print("Failed to read from DS18B20 within time limit ");
+        Serial.print(millis() - startMills);
+        Serial.print("Going to sleep");
+      }
+      goingToSleep();
     }
   } while (temp == 85.0 || temp == (-127.0));
 }
