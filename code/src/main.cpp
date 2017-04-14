@@ -41,18 +41,13 @@ This header must be included in any derived code or copies of the code.
 
 // Set up ESP8266 ADC for voltage read
 ADC_MODE(ADC_VCC);
+float vcc;
 
 // DS18B20
 float temp(NAN);
 
-// ESP
-float vcc;
-const uint32_t esp_id = ESP.getChipId();
-
 // Timer placeholders
 unsigned long startMills = 0;
-unsigned long wifiMills = 0;
-unsigned long subMills = 0;
 
 // Function Prototypes
 void readDS();
@@ -71,10 +66,6 @@ OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature DS18B20(&oneWire);
 char temperatureCString[6];
 
-long lastMsg = 0;
-char msg[50];
-int value = 0;
-
 void setup() {
   startMills = millis();
   //Power the DS18B20
@@ -89,7 +80,6 @@ void setup() {
 }
 
 void setup_wifi() {
-  //delay(10);
   // We start by connecting to a WiFi network
   if (DEBUG_PRINT) {
     Serial.println();
